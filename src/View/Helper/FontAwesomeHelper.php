@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Gutocf\FontAwesome\View\Helper;
 
 use Cake\View\Helper;
-use Khill\FontAwesome\FontAwesome;;
+use Khill\FontAwesome\FontAwesome;
 
 class FontAwesomeHelper extends Helper
 {
@@ -32,6 +32,7 @@ class FontAwesomeHelper extends Helper
     {
         $fa = new FontAwesome($icon, $style);
 
+        /** @phpstan-ignore-next-line */
         return $fa
             ->fixedWidth()
             ->__toString();

@@ -19,6 +19,20 @@ Install the plugin with composer
 
 `composer require gutocf/cakephp-font-awesome`
 
-###  Plugin load
+###  Load helper
 
-bin/cake plugin load FontAwesome
+Load the helper at `Application.php` file
+
+```php
+public function initialize(): void
+{
+  //...
+  $this->loadHelper('Gutocf/FontAwesome.FontAwesome');
+}
+```
+
+Use it at your views
+
+```php
+echo $this->FontAwesome->icon('check');
+```
